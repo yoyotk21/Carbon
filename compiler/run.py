@@ -9,6 +9,7 @@ to_add = """(require 2htdp/image)
 (define (-else x) x)
 (define (== x y) (= x y))
 (define (!= x y) (not (= x y)))
+(define (~ x) (- 0 x))
 ;; The above code was added by the compiler.
 
 """

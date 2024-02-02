@@ -13,7 +13,6 @@ to_replace = {
     "struct": "define-struct",
     '&': 'make-posn',
     '@': 'list-ref',
-    '~': '-'
 }
 
 def compile_1d(tokens):
@@ -38,7 +37,6 @@ def compile_1d(tokens):
     args = tokens[1:]
 
     s = [Token('(', "Symbol"), func]
-
     for arg in args:
         s.append(arg)
 
