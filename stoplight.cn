@@ -1,0 +1,29 @@
+;; animates a stoplight in carbon
+
+circle_radius = 50
+
+(render_circle color) = 
+    (circle circle_radius "solid" color)
+
+(render_circle "red") expects
+    (circle 50 "solid" "red")
+
+
+(next_color color) = 
+    if (string=? color "red") then
+        "green"
+    else if (string=? color "green") then
+        "yellow"
+    else if (string=? color "yellow") then
+        "red"
+    else 
+        ;; shouldn't get here
+        "red"
+
+(next_color "red") expects "green"
+(next_color "green") expects "yellow"
+(next_color "yellow") expects "red"
+
+(big_bang "red"
+    (to_draw render_circle)
+    (on_tick next_color 1))
