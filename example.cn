@@ -1,0 +1,66 @@
+;; this will be ignored
+;; but it can only be used on a new line
+
+;; types
+;; string:
+"string"
+;; Number:
+12
+12.7
+;; Boolean
+true
+false
+
+;; assignements
+;; assigning variables
+x = 5
+y = if true then 10 else 5
+
+;; assigning functions
+
+(double num) = 
+    num * 2
+
+(factorial num) = 
+    if num == 0 then 1
+    else 
+        num * (factorial num-1)
+
+(factorial 3) expects 6
+
+;; conditionals
+if true then 
+    "This should be the result"
+else if false then
+    "This should not be the result"
+else 
+    "This should definantely be the result"
+
+;; structures
+
+struct person (name age)
+
+bob = (make_person "bob" 30)
+
+bobs_name = (person_name bob)
+
+;; lists
+
+a_list = (list 1 2 3 4 5)
+a_list @ 1 == 2
+
+;; positions are just any two values
+
+p = 10 & "hello"
+
+;; expects will check if a function executed correctly
+;; there is also expects_random for functions that use randomness
+
+
+(posn_x p) expects 10
+(posn_y p) expects "hello"
+
+(random 5) expects_random (random 5)
+
+
+
