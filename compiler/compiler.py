@@ -12,7 +12,8 @@ to_replace = {
     "satisfies": "check-satisfy",
     "struct": "define-struct",
     '&': 'make-posn',
-    '@': 'list-ref'
+    '@': 'list-ref',
+    '~': '-'
 }
 
 def compile_1d(tokens):
