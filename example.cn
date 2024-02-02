@@ -47,7 +47,7 @@ bobs_name = (person_name bob)
 ;; lists
 
 a_list = (list 1 2 3 4 5)
-a_list @ 1 == 2
+a_list @ 1 expects 2
 
 ;; positions are just any two values
 
